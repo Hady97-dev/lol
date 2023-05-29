@@ -3,13 +3,13 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 
-	public Transform player;       //Public variable to store a reference to the player game object
+	public Transform player;       
 
 
 	public Vector3 CameraOffset;         //Private variable to store the offset distance between the player and camera
 
 	[Range(0.01f, 1f)]
-	public float smoothness = 0.5f;
+	public float smoothness = 0.5f;     // two  optional lines
 
 	// Use this for initialization
 	void Start () 
