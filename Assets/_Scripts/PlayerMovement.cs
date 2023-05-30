@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float RotateSpeedMovement = .075f;                 // good rotate speed
     float RotateVelocity;
 
-    public Pumpkinhulk_Animations pumpkinhulk_Animations;
+    public PlayerAnimator playerAnimator;
 
 
     // Start is called before the first frame update
@@ -26,12 +26,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
-            pumpkinhulk_Animations.RunningAnim();
-
-          //  if (agent.isStopped )
-            {
-          //      pumpkinhulk_Animations.StopRunningAnim();
-            }
+            
 
 
             //checking if the raycast shots hit something that uses the nav mesh system.
