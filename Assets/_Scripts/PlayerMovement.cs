@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public float RotateSpeedMovement = .075f;                 // good rotate speed
     float RotateVelocity;
 
+    public Pumpkinhulk_Animations pumpkinhulk_Animations;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +21,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         // when pressing right mouse button
         if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
+            pumpkinhulk_Animations.RunningAnim();
+
+          //  if (agent.isStopped )
+            {
+          //      pumpkinhulk_Animations.StopRunningAnim();
+            }
+
 
             //checking if the raycast shots hit something that uses the nav mesh system.
-            if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit , Mathf.Infinity))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit , Mathf.Infinity))
             {
                 // have the player move to the raycast point 
                 agent.SetDestination(hit.point);
+
+               
+               
+
 
                 // rotation
                 Quaternion rotationToLookAt = Quaternion.LookRotation(hit.point - transform.position);
