@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Abilities : MonoBehaviour
+public class PlayerAbilities : MonoBehaviour
 {
     [Header ("Ability1")]
     public Image ability1_icon_B;    
