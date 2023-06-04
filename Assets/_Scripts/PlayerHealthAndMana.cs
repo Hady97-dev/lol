@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealthAndMana : MonoBehaviour
 {
+    public HealthSlider3D healthSlider3D;
     // Start is called before the first frame update
     void Start()
     {

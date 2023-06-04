@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float RotateSpeedMovement = .075f;                 // good rotate speed
     float RotateVelocity;
 
-    public PlayerAnimator playerAnimator;
+    //public PlayerAnimator playerAnimator;             // might be used for mobile movement
 
 
     // Start is called before the first frame update

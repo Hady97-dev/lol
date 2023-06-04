@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 
-	public Transform player;       
+	private Transform player;       
 
 
 	public Vector3 CameraOffset;         //Private variable to store the offset distance between the player and camera
@@ -14,6 +14,7 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		//Calculate and store the offset value by getting the distance between the player's position and camera's position.
 		CameraOffset = transform.position - player.transform.position;
 	}
