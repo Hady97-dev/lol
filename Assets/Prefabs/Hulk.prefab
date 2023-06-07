@@ -1911,6 +1911,7 @@ GameObject:
   - component: {fileID: 3431800803014355248}
   - component: {fileID: 3431800803014355249}
   - component: {fileID: 3431800803014355254}
+  - component: {fileID: -5121997670117476502}
   m_Layer: 0
   m_Name: Hulk
   m_TagString: Player
@@ -2022,7 +2023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateSpeedMovement: 0.075
-  playerAnimator: {fileID: 0}
 --- !u!114 &3431800803014355252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,6 +2060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc1a85bb0ec9af49b33a15b5fb32078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerVFX: {fileID: -5121997670117476502}
   ability1_icon_B: {fileID: 2339613717209720000}
   CoolDown1: 5
   ability2_icon_B: {fileID: 1351451891370669176}
@@ -2097,6 +2098,23 @@ MonoBehaviour:
   playerAnimator: {fileID: 3431800803014355252}
   playerAbilities: {fileID: 3431800803014355248}
   playerCombat: {fileID: 3431800803014355255}
+--- !u!114 &-5121997670117476502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549421617933390957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f01b58317583e4d925d9c32a361ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ability1_Mesh: {fileID: 8929414029394095390, guid: b716b72da71567041b074d5178c93ec8,
+    type: 3}
+  Ability1_Speed: 10
+  target: {fileID: 5891167764959246349, guid: d61c6a2a2af130846a7df2da0f5576ea, type: 3}
+  FirePoint: {fileID: 7240344628461907523}
 --- !u!1 &2875789854914490207
 GameObject:
   m_ObjectHideFlags: 0

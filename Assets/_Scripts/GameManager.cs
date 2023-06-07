@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
 {
     public GameObject Hulk;
     public GameObject Maria;
+    public static GameManager instance = null;
     int activeScene;
     private int NextSceneToLoad;
-    public PlayerManager playerManager;
-
+    
 
     // Start is called before the first frame update
    

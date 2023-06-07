@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerAbilities : MonoBehaviour
 {
+    public PlayerVFX playerVFX;
+
     [Header ("Ability1")]
     public Image ability1_icon_B;    
     public float CoolDown1 = 5f;
@@ -30,6 +32,7 @@ public class PlayerAbilities : MonoBehaviour
         if (IsCoolDown1 == true)
         {
             Ability1();
+            
         }
         if (IsCoolDown2 == true)
         {
@@ -41,13 +44,17 @@ public class PlayerAbilities : MonoBehaviour
      {
         if( IsCoolDown1 == false)
         {
+            playerVFX.PlayerAbility1_VFX();     // play vfx effect
             IsCoolDown1 = true;
-            ability1_icon_B.fillAmount = 1;  
+            ability1_icon_B.fillAmount = 1;
+            
         }
 
         if(IsCoolDown1)
         {
             ability1_icon_B.fillAmount -= (1 / CoolDown1) * Time.deltaTime;
+            
+
 
             if (ability1_icon_B.fillAmount <= 0)
             {
